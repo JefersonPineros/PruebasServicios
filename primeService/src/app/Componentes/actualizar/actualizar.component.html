@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="stylesActualizar">
+    <button class="btn btn-danger" data-toggle="popover" data-container="body" title="Popover title" data-placement="right" data-content="Por favor actualice los campos que corresponda" (click)="cargarSeleccionado()">actualizar Seleccionado</button>
+    <br>
+    <br>
+    <div class="mr-2" *ngIf="item">
+
+        <form #formActualizar="ngForm" (ngSubmit)="ngSubmit()">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+
+                <label for="inputEmail4">_about</label>
+                <input type="text" pInputText name="_about" #_about="ngModel" [(ngModel)]="item._about" class="form-control" id="inputEmail4" [value]="item._about">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">accessURL</label>
+                <input type="text" pInputText name="accessURL" #accessURL="ngModel" [(ngModel)]="item.accessURL" class="form-control" id="inputPassword4" [value]="item.accessURL">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress">byteSize</label>
+              <input type="text" pInputText name="byteSize" #byteSize="ngModel" [(ngModel)]="item.byteSize" class="form-control" id="inputAddress" [value]="item.byteSize">
+            </div>
+            <div class="form-group">
+              <label for="inputAddress2">format</label>
+              <input type="text" pInputText name="format" #format="ngModel" [(ngModel)]="item.format" class="form-control" id="inputAddress2" [value]="item.format">
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputCity">title</label>
+                <input type="text" pInputText name="title" #title="ngModel" [(ngModel)]="item.title" class="form-control" id="inputCity" [value]="item.title">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputZip">type</label>
+                <input type="text" pInputText name="type" #type="ngModel" [(ngModel)]="item.type" class="form-control" id="inputZip" [value]="item.type">
+              </div>
+            </div>
+            <button type="submit"  class="btn btn-primary">Actualizar</button>
+          </form>
+    </div>
+</div>
+</div>
+
+<!-- <form #form2="ngForm">
+  <ng-component>
+    <span class="p-input-icon-left">
+
+      <input type="text" pInputText name="_about" #_about="ngModel" [(ngModel)]="_about" placeholder="Search">
+    </span>
+
+    <span class="p-input-icon-right">
+      <input type="text" pInputText [(ngModel)]="accessURL" >
+    </span>
+  </ng-component>
+</form> -->
